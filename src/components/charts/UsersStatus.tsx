@@ -107,7 +107,7 @@ export function UsersStatus({ refresh }: { refresh: number }) {
           <div>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              User Status Overview
+              Users Status Overview
             </CardTitle>
             <CardDescription className="text-xs">Distribution of user accounts by status</CardDescription>
           </div>

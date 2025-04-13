@@ -42,13 +42,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
-import { CSSProperties, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { columns } from "./columns"
 import { User } from "./columns"
 import { CalendarDays, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, CircleCheck, CircleX, FilterX, IdCard, Import, Loader2, Mail, PlusCircle, RefreshCcw, RefreshCw, Settings2, Shield, ShieldAlert, ShieldCheck, User2 } from "lucide-react"
 import axios from "axios"
-import MoonLoader from "react-spinners/MoonLoader";
 import { toast } from "sonner"
 import DeleteModal from "@/components/modals/DeleteModal"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -58,7 +57,7 @@ import { useForm } from "react-hook-form"
 import { AddUserModal } from "@/components/modals/AddUserModal"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { UsersCount } from "@/components/charts/UsersCount"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { UsersStatus } from "@/components/charts/UsersStatus"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
@@ -74,7 +73,7 @@ const FormSchema = z.object({
 type FormData = z.infer<typeof FormSchema>;
 
 export default function DataTable() {
-  const { register, handleSubmit, formState: {errors}, reset, setError, setValue } = useForm<FormData>({
+  const { register, handleSubmit, formState: {errors}, setValue } = useForm<FormData>({
     resolver: zodResolver(FormSchema),
   })
   const [refresh, setRefresh] = useState(0);
@@ -82,7 +81,6 @@ export default function DataTable() {
   const [openEditDialog, setOpenEditDialog] = useState(false);
   const [openAddDialog, setOpenAddDialog] = useState(false);
   const [openViewDialog, setOpenViewDialog] = useState(false);
-  const [userExists, setUserExists] = useState(false);
   const [loadingTable, setLoadingTable] = useState(true);
 
   const [sorting, setSorting] = React.useState<SortingState>([])

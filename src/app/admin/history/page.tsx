@@ -1,10 +1,6 @@
 "use client"
 
-import { PollutantsDisplay } from "@/components/charts/PollutantsDisplay"
-import { PollutantsRadar } from "@/components/charts/PollutantsRadar"
-import { PollutantsTime } from "@/components/charts/PollutantsTime"
 import { AppSidebar } from "@/components/dashboard/app-sidebar"
-import { ModeToggle } from "@/components/ModeToggle"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -19,7 +15,6 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { useAuth } from "../../context/AuthContext"
 import TimelineStepperExample from "@/components/timeline-stepper"
 
 export default function History() {

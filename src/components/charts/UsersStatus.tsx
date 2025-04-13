@@ -58,7 +58,7 @@ export function UsersStatus({ refresh }: { refresh: number }) {
     },
   } satisfies ChartConfig
 
-  const renderStatusChart = (count: number, label: string, data: any[], color: string) => {
+  const renderStatusChart = (count: number, label: string, data: unknown[], color: string) => {
     if (count === 0) {
       return (
         <div className="flex flex-col items-center justify-center h-44">

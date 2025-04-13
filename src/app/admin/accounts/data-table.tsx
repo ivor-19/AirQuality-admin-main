@@ -520,7 +520,7 @@ export default function DataTable() {
                       <DialogHeader>
                         <DialogTitle>Edit User Details</DialogTitle>
                         <DialogDescription>
-                        Click save when you're done.
+                        Click save when you&#39;re done.
                         </DialogDescription>
                       </DialogHeader>
                       <div className="grid gap-4 py-4">

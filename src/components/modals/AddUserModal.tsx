@@ -126,7 +126,7 @@ export const AddUserModal = ({open, setOpen, fetch} : AddUserModalProps) => {
         <DialogHeader>
           <DialogTitle>Add User</DialogTitle>
           <DialogDescription>
-          Click submit when you're done.
+          Click submit when you&#39;re done.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 p-4">
